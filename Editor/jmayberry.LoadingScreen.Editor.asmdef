@@ -1,0 +1,19 @@
+{
+    "name": "jmayberry.LoadingScreen.Editor",
+    "rootNamespace": "jmayberry.LoadingScreen.Editor",
+    "references": [
+        "jmayberry.LoadingScreen",
+        "jmayberry.CustomAttributes"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
