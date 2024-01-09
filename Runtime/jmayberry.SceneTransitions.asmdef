@@ -1,8 +1,9 @@
 {
-    "name": "jmayberry.LoadingScreen",
-    "rootNamespace": "jmayberry.LoadingScreen",
+    "name": "jmayberry.SceneTransitions",
+    "rootNamespace": "jmayberry.SceneTransitions",
     "references": [
-        "jmayberry.CustomAttributes"
+        "jmayberry.CustomAttributes",
+        "Unity.TextMeshPro"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

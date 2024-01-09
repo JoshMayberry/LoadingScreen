@@ -1,9 +1,9 @@
 {
-    "name": "jmayberry.LoadingScreen.Editor",
-    "rootNamespace": "jmayberry.LoadingScreen.Editor",
+    "name": "jmayberry.SceneTransitions.Editor",
+    "rootNamespace": "jmayberry.SceneTransitions.Editor",
     "references": [
-        "jmayberry.LoadingScreen",
-        "jmayberry.CustomAttributes"
+        "jmayberry.CustomAttributes",
+        "jmayberry.SceneTransitions"
     ],
     "includePlatforms": [
         "Editor"
