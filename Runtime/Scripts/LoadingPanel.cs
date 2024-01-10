@@ -21,31 +21,31 @@ namespace jmayberry.SceneTransitions {
 		[Header("Tweak")]
 		[SerializeField] protected float fadeInLoadTime = 1f;
 
-        private void Start() {
+		private void Start() {
 			SetAlpha(this.LoadingBackground, 0);
 			SetAlpha(this.LoadingBarBorder, 0);
 			SetAlpha(this.LoadingBarFill, 0);
 			SetAlpha(this.LoadingText, 0);
-            LoadingScreenContainer.SetActive(false);
-        }
+			LoadingScreenContainer.SetActive(false);
+		}
 
-        public bool HasLoadingBar() {
+		public bool HasLoadingBar() {
 			return (LoadingScreenContainer != null) && (LoadingBackground != null) && (LoadingBarFill != null);
-        }
+		}
 
-        internal IEnumerator Show() {
-            LoadingBarFill.fillAmount = 0;
-            LoadingScreenContainer.SetActive(true);
+		internal IEnumerator FadeIn() {
+			LoadingBarFill.fillAmount = 0;
+			LoadingScreenContainer.SetActive(true);
 
-            yield return LerpOpacity(0, 1);
-        }
+			yield return LerpOpacity(0, 1);
+		}
 
-        internal IEnumerator Hide() {
-            yield return LerpOpacity(1, 0);
-            LoadingScreenContainer.SetActive(false);
-        }
+		internal IEnumerator FadeOut() {
+			yield return LerpOpacity(1, 0);
+			LoadingScreenContainer.SetActive(false);
+		}
 
-        protected virtual IEnumerator LerpOpacity(float initialOpacity, float targetOpacity) {
+		protected virtual IEnumerator LerpOpacity(float initialOpacity, float targetOpacity) {
 			yield return doOverTime(this.fadeInLoadTime, (float progress) => {
 				float currentAlpha = Mathf.Lerp(initialOpacity, targetOpacity, progress);
 				SetAlpha(this.LoadingBackground, currentAlpha);
@@ -81,16 +81,16 @@ namespace jmayberry.SceneTransitions {
 			}
 		}
 
-        internal void SetText(string value) {
-            if (LoadingText != null) {
-                LoadingText.text = value;
-            }
-        }
+		internal void SetText(string value) {
+			if (LoadingText != null) {
+				LoadingText.text = value;
+			}
+		}
 
-        internal void SetFill(float value) {
+		internal void SetFill(float value) {
 			if (LoadingBarFill != null) {
-                LoadingBarFill.fillAmount = value;
-            }
-        }
-    }
+				LoadingBarFill.fillAmount = value;
+			}
+		}
+	}
 }

@@ -814,6 +814,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadingPanel: {fileID: 2004999572}
   transitionPanel: {fileID: 8782329043097862139}
+  sceneTransitionCanvas: {fileID: 0}
+  persistOnLoad: 0
   sceneName: 
 --- !u!1 &1778751286
 GameObject:
@@ -872,7 +874,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Scene 2
+  m_text: Scene 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

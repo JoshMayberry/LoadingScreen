@@ -1,6 +1,6 @@
 {
 	"name": "com.jmayberry.loadingscreen",
-	"displayName": "Loading Screen",
+	"displayName": "Scene Transitions",
 	"version": "1.1.0",
 	"unity": "2021.1",
 	"description": "A helper library for implementing a loading screen and scene transitions.",
@@ -18,9 +18,14 @@
 	},
 	"samples": [
 		{
-			"displayName": "ExampleUse",
-			"description": "An example ofn how to use this.",
-			"path": "Samples~/ExampleUse"
+			"displayName": "PersistManager",
+			"description": "An example of how to persist the scene transition manager across scene loads.",
+			"path": "Samples~/PersistManager"
+		},
+		{
+			"displayName": "DontPersistManager",
+			"description": "An example of how to not persist the scene transition manager across scene loads.",
+			"path": "Samples~/DontPersistManager"
 		}
 	]
 }
