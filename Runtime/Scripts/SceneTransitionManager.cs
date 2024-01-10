@@ -13,15 +13,19 @@ using System.Threading;
 namespace jmayberry.SceneTransitions {
 	// Use [Unity Loading Screen - Easy Tutorial](https://www.youtube.com/watch?v=wvXDCPLO7T0)
 	public class SceneTransitionManager : MonoBehaviour {
+		[Header("Setup")]
 		public LoadingPanel loadingPanel;
 		public TransitionPanel transitionPanel;
 		public Canvas sceneTransitionCanvas;
+		[Required] public string rootScene; // The main scene after the preload scene this one is in
 
-		public List<LoadOperation> preloadOperations = new List<LoadOperation>();
-
+		[Header("Tweak")]
 		[SerializeField] internal protected bool loadingPanelOnlyForPreload = true;
 		[SerializeField] internal protected bool persistOnLoad = true;
-        [Readonly] public string sceneName;
+
+		[Header("Debug")]
+		[Readonly] public string sceneName;
+		public List<LoadOperation> preloadOperations = new List<LoadOperation>();
 
 		public static SceneTransitionManager instance { get; private set; }
 		protected virtual void Awake() {
@@ -43,6 +47,10 @@ namespace jmayberry.SceneTransitions {
 					transitionPanel = null;
 				}
 			}
+		}
+
+		public virtual void LoadRoot() {
+			this.LoadScene(rootScene);
 		}
 
 		public virtual void LoadScene(string sceneName=null) {
